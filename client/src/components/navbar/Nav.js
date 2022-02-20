@@ -3,7 +3,7 @@ import {FaFacebook,FaLinkedinIn,FaShoppingBag} from 'react-icons/fa'
 import styled from 'styled-components'
 function Nav() {
   return (
-    <Container className='h-[40px] fixed bg-transparent  px-12 py-5'>
+    <Container className='h-[40px] fixed  bg-transparent  px-12 py-5 '>
       <h1 className='text-white font-bold capitalize text-base'>Zeta<span className='capitalize text-base font-bold text-button'>Hut</span></h1>
 
       <div className='flex gap-5 capitalize text-white text-base font-bold'>
@@ -14,8 +14,8 @@ function Nav() {
 
       <div className='flex gap-4 justify-center '>
       <a href='#/'><FaShoppingBag size={"28px"} color={"#fff"}/></a>
-      <a href='#/' className='justify-self-center '><FaFacebook color={"#3b5998"}/></a>
-      <a href='#/' className='justify-self-center '><FaLinkedinIn color={" #0e76a8"}/></a>
+      <a href='#/' className='justify-self-center '><FaFacebook color={"#3b5998"} size={"24px"}/></a>
+      <a href='#/' className='justify-self-center '><FaLinkedinIn color={" #0e76a8"} size={"24px"}/></a>
 
       </div>
     </Container>
