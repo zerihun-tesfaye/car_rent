@@ -12,10 +12,10 @@ function Nav() {
       <a href='#/'>Blogs</a>
       </div>
 
-      <div className='flex gap-4 justify-center'>
+      <div className='flex gap-4 justify-center '>
       <a href='#/'><FaShoppingBag size={"28px"} color={"#fff"}/></a>
-      <a href='#/'><FaFacebook color={"#3b5998"}/></a>
-      <a href='#/'><FaLinkedinIn color={" #0e76a8"}/></a>
+      <a href='#/' className='justify-self-center '><FaFacebook color={"#3b5998"}/></a>
+      <a href='#/' className='justify-self-center '><FaLinkedinIn color={" #0e76a8"}/></a>
 
       </div>
     </Container>
