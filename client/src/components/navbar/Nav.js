@@ -1,9 +1,22 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import {FaFacebook,FaLinkedinIn,FaShoppingBag} from 'react-icons/fa'
 import styled from 'styled-components'
 function Nav() {
+  const [navbar, setNavbar] = useState(false)
+  const changeBackground = () => {
+    console.log(window.scrollY)
+    if (window.scrollY >= 66) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+  useEffect(() => {
+    changeBackground()
+    window.addEventListener("scroll", changeBackground)
+  })
   return (
-    <Container className='h-[40px] fixed  bg-transparent  px-12 py-5 '>
+    <Container className={navbar ? 'h-[60px] fixed bg-iconcolor px-12 py-15  items-center z-50':'h-[60px] fixed items-center  bg-transparent   px-12 py-15'}>
       <h1 className='text-white font-bold capitalize text-base'>Zeta<span className='capitalize text-base font-bold text-button'>Hut</span></h1>
 
       <div className='flex gap-5 capitalize text-white text-base font-bold'>
