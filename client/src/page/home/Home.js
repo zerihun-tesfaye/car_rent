@@ -9,6 +9,8 @@ import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
  import {ImRocket,ImLocation2} from 'react-icons/im'
 import Used from '../../components/tab/Used';
 import New from '../../components/tab/New';
+import userimage from '../../assets/image/imageuser.png'
+import { Rating } from '@mui/material';
  function Home() {
   return (
     <>
@@ -72,6 +74,44 @@ import New from '../../components/tab/New';
               <TabPanel value={0}> <Used/> </TabPanel>
               <TabPanel value={1}> <New/> </TabPanel>
             </TabsUnstyled>
+        </div>
+
+        {/** what custome are saying */}
+
+        <div className='flex mt-20 flex-col'>
+          <h1 className='text-black text-[20px] capitalize font-medium text-center'>What Customer Saying</h1>
+            <div className='w-full flex justify-center gap-10 items-center align-middle mt-12 '>
+                <div className='w-[300px] h-auto shadow-3xl drop-shadow-4xl shadow-shadowcolor rounded-md p-5'>
+                    <div className='flex gap-4' >
+                        <img className='w-[60px] h-[60px]' src={userimage} alt='userimage'/>
+                        <h1 className='self-center font-normal text-base'>Lala Mockup</h1>
+                    </div>
+                    <div className='py-3'>
+                        <Rating name='no-value' value={4}/>
+                    </div>
+                    <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                </div>
+                <div className='w-[300px] h-auto shadow-3xl drop-shadow-4xl shadow-shadowcolor rounded-md p-5'>
+                    <div className='flex gap-4' >
+                        <img className='w-[60px] h-[60px]' src={userimage} alt='userimage'/>
+                        <h1 className='self-center font-normal text-base'>Lala Mockup</h1>
+                    </div>
+                    <div className='py-3'>
+                        <Rating name='no-value' value={4}/>
+                    </div>
+                    <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                </div>
+                <div className='w-[300px] h-auto shadow-3xl drop-shadow-4xl shadow-shadowcolor rounded-md p-5'>
+                    <div className='flex gap-4' >
+                        <img className='w-[60px] h-[60px]' src={userimage} alt='userimage'/>
+                        <h1 className='self-center font-normal text-base'>Lala Mockup</h1>
+                    </div>
+                    <div className='py-3'>
+                        <Rating name='no-value' value={4}/>
+                    </div>
+                    <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                </div>
+            </div>
         </div>
     </>
   )
