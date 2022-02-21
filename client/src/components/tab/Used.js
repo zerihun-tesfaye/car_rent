@@ -5,7 +5,7 @@ import {ImLocation2} from 'react-icons/im'
 function Used() {
   return (
     <div className='w-full flex justify-evenly align-middle  mt-10 px-4 py-2'>
-        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col '>
+        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col bg-white '>
             <img className='w-full object-contain' src={imagecar} alt='usedcars'/>
             <div className='flex  justify-between align-middle px-5 w-full pt-5'>
                 <div className='flex gap-1' >
@@ -24,7 +24,7 @@ function Used() {
             </div>
             <div className=' w-[60px] h-[40px] text-lg text-black font-medium py-3 px-1 items-center flex align-middle justify-center bg-shadowcolor self-end mr-10 mt-10 rounded-md'>Used</div>
         </div>
-        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col '>
+        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col bg-white '>
             <img className='w-full object-contain' src={imagecar} alt='usedcars'/>
             <div className='flex  justify-between align-middle px-5 w-full pt-5'>
                 <div className='flex gap-1' >
@@ -43,7 +43,7 @@ function Used() {
             </div>
             <div className=' w-[60px] h-[40px] text-lg text-black font-medium py-3 px-1 items-center flex align-middle justify-center bg-shadowcolor self-end mr-10 mt-10 rounded-md'>Used</div>
         </div>
-        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col '>
+        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col bg-white '>
             <img className='w-full object-contain' src={imagecar} alt='usedcars'/>
             <div className='flex  justify-between align-middle px-5 w-full pt-5'>
                 <div className='flex gap-1' >
