@@ -1,7 +1,14 @@
 import React from 'react'
  import  Hero from "../../components/hero/Hero"
+ import { styled } from '@mui/system';
+import TabsUnstyled from '@mui/base/TabsUnstyled';
+import TabsListUnstyled from '@mui/base/TabsListUnstyled';
+import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
+import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
  import {FaMapMarkedAlt,FaCarSide,FaCalendarAlt,FaUsers} from "react-icons/fa"
  import {ImRocket,ImLocation2} from 'react-icons/im'
+import Used from '../../components/tab/Used';
+import New from '../../components/tab/New';
  function Home() {
   return (
     <>
@@ -55,8 +62,54 @@ import React from 'react'
               </div>
           </div>
        </div>
+       {/**  tab layout */}
+        <div className='w-full mt-20'>
+            <TabsUnstyled defaultValue={0}>
+              <TabList>
+                  <Tab>Used</Tab>
+                  <Tab>New</Tab>
+              </TabList>
+              <TabPanel value={0}> <Used/> </TabPanel>
+              <TabPanel value={1}> <New/> </TabPanel>
+            </TabsUnstyled>
+        </div>
     </>
   )
 }
-
+const Tab = styled(TabUnstyled)`
+color: black;
+font-weight: 500;
+cursor: pointer;
+width: auto;
+margin-top: 15px;
+display: flex;
+font-size: 18px;
+padding: 12px 16px;
+border-radius: 12px;
+&:hover{
+    background-color: beige;
+}
+&:focus{
+    color: white;
+    outline: 2px solid beige;
+    outline-offset: 2px;
+}
+&.${tabUnstyledClasses.selected}{
+    background-color: #008CBC;
+    color: white;
+}
+`
+const TabPanel=styled(TabPanelUnstyled)`
+width: 100%;
+padding: 15px;
+height: auto;
+color: black;
+`
+const TabList=styled(TabsListUnstyled)`
+width: 100%;
+display: flex;
+align-items: center;
+gap:12px;
+justify-content: center;
+`
 export default Home
