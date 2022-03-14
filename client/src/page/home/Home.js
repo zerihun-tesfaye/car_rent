@@ -10,12 +10,17 @@ import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 import Used from '../../components/tab/Used';
 import New from '../../components/tab/New';
 import userimage from '../../assets/image/imageuser.png'
-import { Rating } from '@mui/material';
+import {  Rating } from '@mui/material';
 import Contact from '../../components/contact/Contact';
+import  imgbottom from '../../assets/image/imagebottomhero.png'
+
  function Home() {
   return (
-    <>
+    <div className="w-full justify-center flex flex-col items-center">
       <Hero/>
+           <div className="flex justify-center items-center m-0 p-0">
+                 <img src={imgbottom} alt="" />
+              </div>
        <div className='flex w-full flex-col mt-20'>
           <h1 className='text-black text-[20px] capitalize font-medium text-center'>Our Working Step</h1>
           <div className='w-full flex justify-center  gap-40 items-center align-middle mt-5 '>
@@ -115,9 +120,10 @@ import Contact from '../../components/contact/Contact';
             </div>
         </div>
         <Contact/>
-    </>
+    </div>
   )
 }
+ 
 const Tab = styled(TabUnstyled)`
 color: black;
 font-weight: 500;

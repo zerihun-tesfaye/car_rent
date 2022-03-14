@@ -1,7 +1,7 @@
 import React from 'react'
 import Cars from '../../components/car/Car'
 import styled from 'styled-components'
-import Hero from '../../components/car/Hero';
+import Hero from '../../components/car/Herocar';
 
 
 function Car() {
