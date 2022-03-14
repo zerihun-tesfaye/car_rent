@@ -6,7 +6,7 @@ const Herocar=()=>{
     <Container>
            
             <div className="hero">
-             <div className='absolute top-[40%] left-[50%] translate-y-[-50%] translate-x-[-50%] mb-10'>
+             <div className=' justify-center flex items-center flex-col absolute top-[40%] left-[50%] translate-y-[-50%] translate-x-[-50%] mb-10'>
                <h2 className='capitalize text-white text-[28px] font-bold'>Find the car That Matches Your Life Style</h2>
                <h1 className='capitalize text-white text-[18px] font-normal'>The right car for you is waiting start here</h1>
                <button className='bg-button text-white py-3 px-2 text-[18px] text-center rounded-md mt-5 hover:scale-100'>Find New Cars</button>
