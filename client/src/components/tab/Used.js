@@ -1,69 +1,81 @@
 import React from 'react'
-import imagecar from '../../assets/image/imagecar.png'
-import user from '../../assets/image/imageuser.png'
-import {ImLocation2} from 'react-icons/im'
+import Newd from '../../data/Used'
+import  styled from 'styled-components'
 function Used() {
   return (
-    <div className='w-full flex justify-evenly align-middle  mt-10 px-4 py-2'>
-        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col bg-white '>
-            <img className='w-full object-contain' src={imagecar} alt='usedcars'/>
-            <div className='flex  justify-between align-middle px-5 w-full pt-5'>
-                <div className='flex gap-1' >
-                    <img className='w-[40px] h-[40px]' src={user} alt='userimage'/>
-                    <h1 className='self-center font-normal text-sm'>Lala Mockup</h1>
+    <Container className='w-full flex  justify-center gap-6 align-middle '>
+         {
+           Newd.map((item,index)=>{
+              return(
+                <Card key={index} className=' pb-3 shadow-2xl 
+                   drop-shadow-2xl shadow-gray-500/50  '>
+                      <div className="w-[280px] p-0 m-0">
+                       <img className='w-full object-contain ' src={item.car} alt='usedcars'/>
+
+                      </div>
+                    <div className='flex items-center justify-between  px-5 w-full pt-4'>
+                    <div className=' w-[40px] flex mt-1  h-[40px] gap-1' >
+                      <img src={item.Profile} alt='userimage'/>
+                      <h1 className='self-center font-normal text-sm'>{item.name}</h1>
+                   </div>
+                     <h1 className='text-black text-base pt-1 font-semi-bold '>{item.price}</h1>
+               </div>
+              <div className='flex w-full items-center'>
+                 <div className="flex  flex-col  items-center">
+                    <h1 className='self-center font-bold capitalize mt-1 text-sm'>{item.carname}</h1>
+                   <div className='flex'>
+                       <span className="ml-4">{item.location}</span>
+                       <h1 className='self-baseline text-sm  semi-bold text-black'>{item.mile}</h1>
+                    
+                   </div>
+                  </div>
                 </div>
-                <h1 className='text-black text-base font-bold self-baseline '>200birr/Day</h1>
-            </div>
-            <div className='flex  justify-evenly gap-10 align-middle px-8 w-full pt-1'>
-                <h1 className='self-center font-bold capitalize text-sm'>2022 Toyota 22 Prius</h1>
-                <a className='text-shadowcolor text-sm font-bold self-baseline ' href='/#detail'>Detail</a>
-            </div>
-            <div className='flex px-12 w-full pt-1' >
-            <ImLocation2 size={'18px'}/>
-            <h1 className='self-baseline text-sm  font-bold text-black'>6Km 30Miles Away  </h1>
-            </div>
-            <div className=' w-[60px] h-[40px] text-lg text-black font-medium py-3 px-1 items-center flex align-middle justify-center bg-shadowcolor self-end mr-10 mt-10 rounded-md'>Used</div>
-        </div>
-        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col bg-white '>
-            <img className='w-full object-contain' src={imagecar} alt='usedcars'/>
-            <div className='flex  justify-between align-middle px-5 w-full pt-5'>
-                <div className='flex gap-1' >
-                    <img className='w-[40px] h-[40px]' src={user} alt='userimage'/>
-                    <h1 className='self-center font-normal text-sm'>Lala Mockup</h1>
+
+              
+                <div className=" w-full  flex items-center justify-between px-5 py-2 ">
+                 <div className=' w-[60px] h-[40px] text-lg 
+                   text-black semi-bold  items-center 
+                   flex align-middle justify-center bg-shadowcolor
+                   self-end rounded-md'>{item.btnused}
+                  </div>
+                   <a className='text-blue-900 hover:opacity-7 bg-[#CDCECF] rounded-sm py-1 px-2 border-1 text-sm font-bold  '
+                    href='/#detail'>{item.Detail}</a>
                 </div>
-                <h1 className='text-black text-base font-bold self-baseline '>200birr/Day</h1>
-            </div>
-            <div className='flex  justify-evenly gap-10 align-middle px-8 w-full pt-1'>
-                <h1 className='self-center font-bold capitalize text-sm'>2022 Toyota 22 Prius</h1>
-                <a className='text-shadowcolor text-sm font-bold self-baseline ' href='/#detail'>Detail</a>
-            </div>
-            <div className='flex px-12 w-full pt-1' >
-            <ImLocation2 size={'18px'}/>
-            <h1 className='self-baseline text-sm  font-bold text-black'>6Km 30Miles Away  </h1>
-            </div>
-            <div className=' w-[60px] h-[40px] text-lg text-black font-medium py-3 px-1 items-center flex align-middle justify-center bg-shadowcolor self-end mr-10 mt-10 rounded-md'>Used</div>
-        </div>
-        <div className='w-[300px] h-auto pb-5 shadow-3xl drop-shadow-4xl shadow-gray-500/50 rounded-3xl flex flex-col bg-white '>
-            <img className='w-full object-contain' src={imagecar} alt='usedcars'/>
-            <div className='flex  justify-between align-middle px-5 w-full pt-5'>
-                <div className='flex gap-1' >
-                    <img className='w-[40px] h-[40px]' src={user} alt='userimage'/>
-                    <h1 className='self-center font-normal text-sm'>Lala Mockup</h1>
-                </div>
-                <h1 className='text-black text-base font-bold self-baseline '>200birr/Day</h1>
-            </div>
-            <div className='flex  justify-evenly gap-10 align-middle px-8 w-full pt-1'>
-                <h1 className='self-center font-bold capitalize text-sm'>2022 Toyota 22 Prius</h1>
-                <a className='text-shadowcolor text-sm font-bold self-baseline ' href='/#detail'>Detail</a>
-            </div>
-            <div className='flex px-12 w-full pt-1' >
-            <ImLocation2 size={'18px'}/>
-            <h1 className='self-baseline text-sm  font-bold text-black'>6Km 30Miles Away  </h1>
-            </div>
-            <div className=' w-[60px] h-[40px] text-lg text-black font-medium py-3 px-1 items-center flex align-middle justify-center bg-shadowcolor self-end mr-10 mt-10 rounded-md'>Used</div>
-        </div>
-    </div>
+         </Card>
+       
+         )
+      })
+    }
+
+ </Container>
+
   )
 }
+const Container = styled.div`
+  display: flex;
+  margin: 2rem 0;
+  @media screen and (max-width:970px){
+      flex-direction: column;
+}
+`;
+const Card = styled.div`
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      width:280px;
+      height:350px;
+      flex-direction: column;
+      border-radius: 15px;
+      background-color:#ffff;
 
-export default Used
+       img{
+         width: 100%;
+         height: 100%;
+         border-radius: 15px 15px 0 0;
+       }
+   @media screen and (max-width:970px){
+      flex-direction: column;
+    }
+`;
+
+export default Used;

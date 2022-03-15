@@ -1,163 +1,142 @@
 import React from 'react'
  import  Hero from "../../components/hero/Hero"
- import { styled } from '@mui/system';
-import TabsUnstyled from '@mui/base/TabsUnstyled';
-import TabsListUnstyled from '@mui/base/TabsListUnstyled';
-import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
-import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
- import {FaMapMarkedAlt,FaCarSide,FaCalendarAlt,FaUsers} from "react-icons/fa"
- import {ImRocket,ImLocation2} from 'react-icons/im'
-import Used from '../../components/tab/Used';
-import New from '../../components/tab/New';
 import userimage from '../../assets/image/imageuser.png'
+import Tabc from '../../components/tab/Tab';
 import {  Rating } from '@mui/material';
 import Contact from '../../components/contact/Contact';
 import  imgbottom from '../../assets/image/imagebottomhero.png'
+import styled from 'styled-components';
+import Setupd from '../../data/Step';
+import Whyd from '../../data/why';
 
  function Home() {
   return (
     <div className="w-full justify-center flex flex-col items-center">
       <Hero/>
-           <div className="flex justify-center items-center m-0 p-0">
+           <div className="flex justify-center  items-center m-0 p-0">
                  <img src={imgbottom} alt="" />
               </div>
-       <div className='flex w-full flex-col mt-20'>
           <h1 className='text-black text-[20px] capitalize font-medium text-center'>Our Working Step</h1>
-          <div className='w-full flex justify-center  gap-40 items-center align-middle mt-5 '>
-              <div className='flex flex-col opacity-100  rounded-md border-shadowcolor '>
-                  <div className=' w-[80px] h-[70px] rounded-lg py-3 px-3 flex justify-center align-middle items-center drop-shadow-4xl shadow-3xl shadow-shadowcolor bg-white '>
-                      <FaMapMarkedAlt size={'38px'} color={'#008CBC'}/>
+          <Setup className='flex w-full justify-center items-center gap-8  mt-8   '>
+           {
+             Setupd.map((item,index)=>{
+               return(
+               <Step key={index} className=' flex  justify-center  items-center  mt-5 '>
+                  <div className='card  rounded-md  border-shadow-color '>
+                     <div className="w-full flex flex-col justify-center items-center">
+                    <div className=' w-[60px] h-[60px] rounded-lg mt-4 px-3 
+                      flex justify-center align-middle items-center drop-shadow-4xl 
+                      shadow-lg shadow-shadowcolor bg-white'>
+                      <span className="border-shadowcolor text-3xl">{item.icon}</span>
                   </div>
-                  <h1 className='text-lg text-black font-bold mt-3'>Choose Your Location</h1>
-                  <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-              </div>
-              <div className='flex flex-col opacity-100  rounded-md border-shadowcolor'>
-                  <div className=' w-[80px] h-[70px] rounded-lg py-3 px-3 flex justify-center align-middle items-center drop-shadow-4xl shadow-3xl shadow-shadowcolor bg-white '>
-                      <FaCarSide size={'38px'} color={'#008CBC'}/>
+                  <h1 className='text-lg text-black justify-center
+                   font-bold mt-3'>{item.title}</h1>
+                  <p className='text-[10px] font-light text-start px-2 
+                  text-black'>{item.description}</p>
                   </div>
-                  <h1 className='text-lg text-black font-bold mt-3 mb-2'>Pick Your Car</h1>
-                  <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
               </div>
-              <div className='flex flex-col opacity-100 rounded-md border-shadowcolor'>
-                  <div className=' w-[80px] h-[70px] rounded-lg py-3 px-3 flex justify-center align-middle items-center drop-shadow-4xl shadow-3xl shadow-shadowcolor bg-white '>
-                      <FaCalendarAlt size={'38px'} color={'#008CBC'}/>
-                  </div>
-                  <h1 className='text-lg text-black font-bold mt-3 mb-2'>Pick-Up Date</h1>
-                  <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-              </div>
-          </div>
-       </div>
+            </Step>
+            )
+          })
+         }
+       </Setup>
 
        {/* why work with us  */}
 
-       <div className='flex mt-20 flex-col'>
-       <h1 className='text-black text-[20px] capitalize font-medium text-center'>Why Choose Zetahut</h1>
-          <div className='w-full flex justify-center  gap-20 items-center align-middle mt-12 '>
-              <div  className=' w-[283px] h-[200px] rounded-[23px] py-3 px-3 flex flex-col gap-3 justify-center align-middle items-center drop-shadow-4xl shadow-3xl shadow-shadowcolor bg-white  '>
-                  <ImRocket size={'48px'} color={'#008CBC'}/>
-                  <h1 className='text-lg text-black font-bold mt-3 mb-2'>Fast and Easy Booking</h1>
-                  <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+       <h1 className='text-black text-[20px] mt-10 capitalize font-medium text-center'>Why Choose Zetahut</h1>
+       <Why className='flex mt-5 gap-4 justify-center items-center'>
+          {
+            Whyd.map((item,index)=>{
+              return(
+             <WCard key={index} className='flex justify-center rounded-lg  items-center align-middle mt-8'>
+               <div  className='py-2 px-2 flex flex-col gap-3 justify-center  items-center drop-shadow-lg  shadow-lg shadow-shadowcolor  '>
+                  <div className=' w-[60px] h-[60px] rounded-lg mt-2 px-3 
+                      flex justify-center align-middle items-center drop-shadow-4xl 
+                      shadow-lg shadow-shadowcolor bg-white'>
+                      <span className="border-shadowcolor text-3xl">{item.Icon}</span>
+                  </div>
+                  <h1 className='text-lg text-black font-bold mt-3 mb-2'>
+                   {item.text}
+                  </h1>
+                  <p className='text-[10px] font-light text-black'>
+                     {item.Description}
+                  </p>
               </div>
-              <div  className=' w-[283px] h-[200px] rounded-[23px] py-3 px-3 flex flex-col gap-3 justify-center align-middle items-center drop-shadow-4xl shadow-3xl shadow-shadowcolor bg-white '>
-                  <ImLocation2 size={'48px'} color={'#008CBC'}/>
-                  <h1 className='text-lg text-black font-bold mt-3 mb-2'>Many Pick Location</h1>
-                  <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-              </div>
-              <div  className=' w-[283px] h-[200px] rounded-[23px] py-3 px-3 flex flex-col gap-3 justify-center align-middle items-center drop-shadow-4xl shadow-3xl shadow-shadowcolor bg-white '>
-                  <FaUsers size={'48px'} color={'#008CBC'}/>
-                  <h1 className='text-lg text-black font-bold mt-3 mb-2'>Satisfied Customers</h1>
-                  <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-              </div>
-          </div>
-       </div>
+             
+          </WCard>
+              )
+            })
+          }
+       </Why>
        {/**  tab layout */}
-        <div className='w-full mt-20'>
-            <TabsUnstyled defaultValue={0}>
-              <TabList>
-                  <Tab>Used</Tab>
-                  <Tab>New</Tab>
-              </TabList>
-              <TabPanel value={0}> <Used/> </TabPanel>
-              <TabPanel value={1}> <New/> </TabPanel>
-            </TabsUnstyled>
+        <div className=' mt-10 flex flex-col justify-center items-center'>
+           <h3>say something</h3>
+             <Tabc/>
         </div>
 
         {/** what custome are saying */}
 
         <div className='flex mt-20 flex-col'>
-          <h1 className='text-black text-[20px] capitalize font-medium text-center'>What Customer Saying</h1>
-            <div className='w-full flex justify-center gap-10 items-center align-middle mt-12 '>
-                <div className='w-[300px] h-auto shadow-3xl drop-shadow-4xl shadow-shadowcolor rounded-md p-5 bg-white'>
+           <h1 className='text-black text-[20px] capitalize font-medium text-center'>What Customer Saying</h1>
+             <div className='w-full flex justify-center gap-10 items-center align-middle mt-12 '>
+                <div className='w-[300px] h-auto shadow-lg drop-shadow-3xl shadow-shadowcolor rounded-md p-5 bg-white'>
                     <div className='flex gap-4' >
                         <img className='w-[60px] h-[60px]' src={userimage} alt='userimage'/>
-                        <h1 className='self-center font-normal text-base'>Lala Mockup</h1>
-                    </div>
-                    <div className='py-3'>
-                        <Rating name='no-value' value={4}/>
-                    </div>
-                    <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                </div>
-                <div className='w-[300px] h-auto shadow-3xl drop-shadow-4xl shadow-shadowcolor rounded-md p-5 bg-white'>
-                    <div className='flex gap-4' >
-                        <img className='w-[60px] h-[60px]' src={userimage} alt='userimage'/>
-                        <h1 className='self-center font-normal text-base'>Lala Mockup</h1>
-                    </div>
-                    <div className='py-3'>
-                        <Rating name='no-value' value={4}/>
-                    </div>
-                    <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                </div>
-                <div className='w-[300px] h-auto shadow-3xl drop-shadow-4xl shadow-shadowcolor rounded-md p-5 bg-white'>
-                    <div className='flex gap-4' >
-                        <img className='w-[60px] h-[60px]' src={userimage} alt='userimage'/>
-                        <h1 className='self-center font-normal text-base'>Lala Mockup</h1>
-                    </div>
-                    <div className='py-3'>
-                        <Rating name='no-value' value={4}/>
-                    </div>
-                    <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing <br/> elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                         <h1 className='self-center font-normal text-base'>Lala Mockup</h1>
+                        </div>
+                         <div className='py-3'>
+                         <Rating name='no-value' value={4}/>
+                       </div>
+                    <p className='text-[10px] font-light text-black'>Lorem ipsum dolor sit amet, consetetur sadipscing</p>
                 </div>
             </div>
-        </div>
         <Contact/>
+      </div>
     </div>
   )
 }
  
-const Tab = styled(TabUnstyled)`
-color: black;
-font-weight: 500;
-cursor: pointer;
-width: auto;
-margin-top: 15px;
-display: flex;
-font-size: 18px;
-padding: 12px 16px;
-border-radius: 12px;
-&:hover{
-    background-color: beige;
-}
-&:focus{
-    color: white;
-    outline: 2px solid beige;
-    outline-offset: 2px;
-}
-&.${tabUnstyledClasses.selected}{
-    background-color: #008CBC;
-    color: white;
-}
-`
-const TabPanel=styled(TabPanelUnstyled)`
-width: 100%;
-padding: 15px;
-height: auto;
-color: black;
-`
-const TabList=styled(TabsListUnstyled)`
-width: 100%;
-display: flex;
-align-items: center;
-gap:12px;
-justify-content: center;
-`
+  
+
+  const Setup = styled.div`
+     display: flex;
+     @media screen and (max-width:979px){
+      display:flex;
+      align-items: center;
+      flex-direction:column;
+     }
+  `;
+ const Step = styled.div`
+  justify-content: center;
+  align-items: center
+  display:flex;
+   .card{
+        background-color:#edde;
+        width:220px;
+        height:10px
+        justify-content: center;
+        flex-direction:column;
+        align-items: center;
+       }
+   
+ `;
+//  why
+ const Why=styled.div`
+   @media screen and (max-width:979px){
+      display: flex;
+      align-items: center;
+      flex-direction:column;
+      
+    }
+ `;
+ const WCard=styled.div`
+        background-color:#f8f8f8;
+        width:220px;
+        height:185px
+        justify-content: center;
+        flex-direction:column;
+        align-items: center;
+        gap:2rem;
+        border-radius:15px;
+ `;
 export default Home

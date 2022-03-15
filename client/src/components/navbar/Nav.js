@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import navdata from '../../data/nav'
 import {Link} from 'react-router-dom'
 import Button from '../button/Button'
+import '../../index.css'
 function Nav() {
   const [navbar, setNavbar] = useState(false)
   const [show, setshow] = useState(false)
@@ -19,9 +20,9 @@ function Nav() {
   const changeBackground = () => {
     console.log(window.scrollY)
     if (window.scrollY >= 66) {
-      setNavbar(true)
+      setNavbar(true);
     } else {
-      setNavbar(false)
+      setNavbar(false);
     }
   }
   useEffect(() => {
@@ -33,26 +34,28 @@ function Nav() {
         <nav className="flex justify-between items-center px-10 py-5">
             <div className="toggle justify-between">
                 <div className="cv flex items-center justify-between">
-                    <svg className="hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <svg onClick={()=>handleClick(false)} className="hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" 
                     stroke-width="2" d="M4 8h16M4 16h16">
                     </path></svg>
                     <Link to="/">
-                      <h1 className='text-white font-bold capitalize text-2xl'>Zeta <span className='capitalize text-2xl font-bold text-red-600'>Hut</span></h1>
+                      <h1 className='text-white font-bold capitalize text-base'>Zeta<span className='capitalize text-base font-bold text-button'>Hut</span></h1>
                     </Link>
-                  <a href='#/' className="hidden"><FaShoppingBag size={"0px"} color={"#fff"}/></a>
+                  <a href='#/' className="hidden"><FaShoppingBag size={"15px"} color={"#fff"}/></a>
                 </div>
              </div>
-          <div className="header flex justify-between items-center">
+          <div className={show ? "active":" header"}>
 
           <div className=' link flex gap-5 justify-center items-center  capitalize text-white text-base font-bold'>
          {
           navdata.map((item, index)=>{
             return(
               <>
-                <li key={index} className="list-none">
-            <Link to={item.url}>
+                <li key={index} className="list-none"
+                 onClick={()=>closeshow(false)}
+                 >
+               <Link to={item.url}>
                 <span>{item.title}</span>
               </Link>
               
@@ -83,24 +86,27 @@ const Container=styled.div`
  position:fixed;
    @media screen and (max-width:978px){
      display: flex;
-     width:100%;
    }
    nav{
       display: flex;
       width:100%;
-      height:100%;
+      justify-content:space-between;
+      align-items:center ;
+      
          @media screen and (max-width:978px){
            display: flex;
            justify-content:space-between;
            margin: 0;
-          padding:0;
+           padding:0;
           
 
    }
     .toggle{
-         display: flex;
-         align-items: center;
-         width:100%;
+        display: flex;
+        align-items: center;
+        width:100%;
+        justify-content:space-between;
+        
           .cv{
             display: flex;
             justify-content:space-between;
@@ -111,8 +117,8 @@ const Container=styled.div`
           }
           svg{
           cursor: pointer;
-          width:1.7rem;
-          height:1.7rem;
+          width:2rem;
+          height:2rem;
           color: white;
            @media screen and (max-width:978px){
             display: flex;
@@ -130,16 +136,19 @@ const Container=styled.div`
         
         }
       .header{
-         width: 100%;
-         justify-content:space-between;
          display: flex;
+         width:100%;
+         justify-content:space-between;
          align-items:center;
+         &#active{
+           left: 0;
+         }
          @media screen and (max-width:978px){
-          display: flex;
+          display: none;
           flex-direction: column;
           position:fixed;
           top: 25px;
-          left: 0;
+          left:0%;
           background: #fff;
           right: 0;
           width:200px;
@@ -155,7 +164,9 @@ const Container=styled.div`
            flex-direction:column;
            padding:0;
            margin:2rem auto;
-          }
+
+             
+         }
          .icon{
            gap:.731rem;
            align-items:center;
