@@ -7,6 +7,9 @@ body{
   /* background-color:rgb(205, 206, 207); */
   
 }
+.test{
+  color:#342e36;
+}
 .active{
  display:flex;
  transition: all 0.3s;

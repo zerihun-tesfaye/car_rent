@@ -18,12 +18,12 @@ import customer from '../../data/Customer';
            {
              Setupd.map((item,index)=>{
                return(
-                 <Step key={index} className=' flex  justify-center  items-center  mt-5 '>
-                  <div className='card  rounded-md '>
+                 <Step key={index} className=' flex justify-center  items-center  mt-5 '>
+                  <div className='card   rounded-2xl '>
                      <div className="w-full flex flex-col justify-center items-center">
                     <div className=' w-[60px] h-[60px] rounded-lg mt-4 px-3 
                       flex justify-center align-middle items-center shadow:md
-                      bg-white'>
+                      bg-black text-white'>
                       <span className="border-shadowcolor text-3xl">{item.icon}</span>
                   </div>
                   <h1 className='text-lg  justify-center
@@ -46,15 +46,15 @@ import customer from '../../data/Customer';
            <h1 className=' text-[20px] text-[#665DF5]  capitalize font-medium text-center'>Why Choose Zetahut</h1>
            {/* <div className="bg-[#7000DF] w-[30%] left-[35%]   h-2 absolute "></div> */}
         </div>
-       <Why className='flex mt-1 gap-4 justify-center items-center'>
+       <Why className='flex mt-1 gap-8 justify-center items-center'>
           {
             Whyd.map((item,index)=>{
               return(
-                <WCard key={index} className='flex justify-center rounded-lg shadow-lg drop-shadow-lg  items-center align-middle mt-8'>
-               <div  className='py-2 px-2 flex flex-col gap-2 justify-center  items-center  '>
+                <WCard key={index} className='flex justify-center rounded-md items-center align-middle mt-4'>
+               <div  className='py-2 px-2 flex flex-col gap-1 justify-center  items-center  '>
                   <div className=' w-[60px] h-[60px] rounded-lg mt-2 px-3 
                       flex justify-center align-middle items-center shadow-md 
-                       bg-white'>
+                     bg-black text-white'>
                       <span className="border-shadowcolor text-3xl">{item.Icon}</span>
                   </div>
                   <h1 className='text-lg font-bold mt-2 mb-2'>
@@ -73,7 +73,7 @@ import customer from '../../data/Customer';
           </div>
        {/**  tab layout */}
         <div className=' mt-10 flex flex-col justify-center items-center'>
-           <h3>say something</h3>
+           <h className="text-center font-bold  text-[#665DF5] capitalize text-lg">the most popular rent cars</h>
              <Tabc/>
         </div>
 
@@ -122,12 +122,14 @@ import customer from '../../data/Customer';
   justify-content: center;
   align-items: center
   display:flex;
+ 
    .card{
-        width:220px;
-        height:10px
+        width:250px;
+        height:200px;
         justify-content: center;
         flex-direction:column;
         align-items: center;
+        background-color:#222529;
         transition:all .3s ease-in-out;
          cursor:pointer;
          &:hover{
@@ -147,13 +149,14 @@ import customer from '../../data/Customer';
  `;
  const WCard=styled.div`
        /* border:1px solid #f8f8f8; */
-        width:220px;
-        height:185px
+        width:250px;
+        height:230px;
         justify-content: center;
         flex-direction:column;
         align-items: center;
-        gap:2rem;
+        gap:2.5rem;
         border-radius:15px;
+        background:#2f3133;
         transition:all .3s ease-in-out;
          cursor:pointer;
          &:hover{
@@ -168,10 +171,11 @@ import customer from '../../data/Customer';
       `;
  const Ccard=styled.div`
         width:250px;
-        height:180px;
+        height:220px;
         gap:4rem;
         border-radius:15px;
         transition:all .3s ease-in-out;
+        background-color:#342e36;
          cursor:pointer;
          &:hover{
            box-shadow:0 0 8px #ddd;
