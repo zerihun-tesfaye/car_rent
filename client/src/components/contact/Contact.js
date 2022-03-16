@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 function Contact() {
   return (
-    <Container className='mt-32  flex flex-col text-center justify-center items-center '>
+    <Container className='mt-32  w-full flex flex-col text-center justify-center items-center '>
       <h1 className='text-base text-black font-bold'>Contact Us</h1>
         <div className=' subcon w-full flex gap-32 mt-8  justify-between items-center'>
-          <div className=" cimg w-[500px] h-[300px]">
-            <img className='w-full h-full object-cover p-5' src={imagecontact} alt='contactus'/>
+          <div className=" cimg  flex-1">
+            <img className='w-full h-full object-cover ' src={imagecontact} alt='contactus'/>
         </div>
           <div className='py-4 w-[300px]  h-[350px] flex flex-col justify-center items-center shadow-2xl drop-shadow-2xl shadow-shadowcolor bg-white rounded-2xl '>
               <form className='gap-5 flex flex-col justify-center align-middle  '>
