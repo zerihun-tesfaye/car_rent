@@ -19,7 +19,7 @@ const Herocar=()=>{
   )
 }
 const Container = styled.div`
-   background-color:rgb(0,0,0,0.55) ;
+   background-color:rgb(0,0,0,.6) ;
     height: 65vh;
     top: 0;
     left: 0;
