@@ -2,11 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 body{
-  background-color:aliceblue;
+  background-color:#d5d6d6;
   /* background-color:rgb(205, 206, 207); */
+  
 }
 .active{
  display:flex;
  transition: all 0.3s;
 }
+ p,h1,h4,h5,h6,h2,h3,small{
+   color:#0e1114;
+ }
+  p{
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    break-inside: avoid;
+    word-wrap:break-word;
+    text-align:center;
+    margin-top: .222rem;
+    font-weight: 300;
+  }
   

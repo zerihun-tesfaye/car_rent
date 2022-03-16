@@ -1,26 +1,65 @@
 import React from 'react'
-import imagecontact from '../../assets/image/Group 13.png'
+import imagecontact from '../../assets/image/contact.svg'
+import styled from 'styled-components';
+
 function Contact() {
   return (
-    <div className='mt-56 px-10 flex flex-col text-center justify-center align-middle w-full h-auto py-3'>
+    <Container className='mt-32  flex flex-col text-center justify-center items-center '>
       <h1 className='text-base text-black font-bold'>Contact Us</h1>
-<div className='flex px-11  justify-center gap-32 mt-11 '>
-      <div>
-        <img className='h-[280px] w-[447px] p-5' src={imagecontact} alt='contactus'/>
-      </div>
-      <div className='py-9 px-11 w-[400px] h-[350px] flex flex-col justify-center align-middle items-center shadow-3xl drop-shadow-4xl shadow-shadowcolor bg-white rounded-2xl '>
-      <form className='gap-5 flex flex-col justify-center align-middle w-full h-full '>
-            <input className='w-[250px] h-[35px] border rounded-lg border-slate-700/50 px-2' placeholder='Name' type='text' required />
-            <input className='w-[250px] h-[35px] border rounded-lg border-slate-700/50 px-2' placeholder='email' type='email' required />
-           <textarea className=' w-[250px] h-[105px] border rounded-lg border-slate-700/50 px-2' placeholder='message' type='text' required />
-      </form>
-      <button className='py-2 px-9 w-auto  text-white rounded-xl bg-shadowcolor '>Send</button>
-      </div>
-</div>
-     
-     
+        <div className=' subcon w-full flex gap-32 mt-8  justify-between items-center'>
+          <div className=" cimg w-[500px] h-[300px]">
+            <img className='w-full h-full object-cover p-5' src={imagecontact} alt='contactus'/>
+        </div>
+          <div className='py-4 w-[300px]  h-[350px] flex flex-col justify-center items-center shadow-2xl drop-shadow-2xl shadow-shadowcolor bg-white rounded-2xl '>
+              <form className='gap-5 flex flex-col justify-center align-middle  '>
+                 <div className='justify-center items-center m-auto gap-2'>
+                    <div className="box mt-4">
+                        <input className='w-[250px] h-[35px] border rounded-sm border-slate-700/50 px-2' placeholder='Name' type='text' required />
+                    </div>
+                    <div className="box mt-4">
+                        <input className='w-[250px] h-[35px] border rounded-sm border-slate-700/50 px-2' placeholder='Name' type='text' required />
+                    </div> 
+                    <div className="box mt-4">
+                     <textarea className=' w-[250px] h-[105px] border rounded-sm border-slate-700/50 px-2' placeholder='message' type='text' required />
+                    </div>
+                 </div>
+                <button className='py-2 px-2  text-white rounded-md bg-shadowcolor '>Send</button>
+             </form>
+        </div>
     </div>
+     
+     
+    </Container>
   )
 }
 
+const Container=styled.div`
+     display:flex;
+     width:100%;
+     overflow:hidden;
+     .cimg{
+       max-width:500px;
+       height:100%;
+        @media screen and (max-width:979px){
+          display:flex;
+           width:100%;
+           height:100%;
+          margin:0 3rem;
+          object-fit:contain;
+     }
+       img{
+           width:100%;
+           height:100%;
+           object-fit:cover;
+          }
+     }
+     .subcon{
+       @media screen and (max-width:979px){
+        display:flex;
+        align-items: center;
+        flex-direction:column;
+
+       }
+     }
+`;
 export default Contact
