@@ -59,6 +59,7 @@ const Container=styled.div`
           text-align: center;
           align-items: center;
           justify-content: center;
+          color:#000;
         }
         .active-tab{
           color: white;

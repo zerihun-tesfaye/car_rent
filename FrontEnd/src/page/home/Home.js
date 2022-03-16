@@ -2,7 +2,6 @@ import React from 'react'
  import  Hero from "../../components/hero/Hero"
 import Tabc from '../../components/tab/Tab';
 import Contact from '../../components/contact/Contact';
-import  imgbottom from '../../assets/image/imagebottomhero.png'
 import styled from 'styled-components';
 import Setupd from '../../data/Step';
 import Whyd from '../../data/why';
@@ -12,20 +11,19 @@ import customer from '../../data/Customer';
   return (
     <Container className="w-full justify-center flex flex-col items-center">
       <Hero/>
-           <div className="flex justify-center  items-center m-0 p-0">
-                 <img src={imgbottom} alt="" />
-              </div>
-          <h1 className=' text-[20px] capitalize font-medium text-center'>Our Working Step</h1>
-          <Setup className='flex w-full justify-center items-center gap-8  mt-8    '>
+      <div className="flex  w-full flex-col mt-10  ">
+
+        <h1 className=' text-[20px] capitalize text-[#665DF5] font-medium text-center'>Our Working Step</h1>
+          <Setup className='  flex w-full justify-center items-center gap-8'>
            {
              Setupd.map((item,index)=>{
                return(
-               <Step key={index} className=' flex  justify-center  items-center  mt-5 '>
-                  <div className='card  rounded-md   odd:shadow-lg drop-shadow-2xl '>
+                 <Step key={index} className=' flex  justify-center  items-center  mt-5 '>
+                  <div className='card  rounded-md '>
                      <div className="w-full flex flex-col justify-center items-center">
                     <div className=' w-[60px] h-[60px] rounded-lg mt-4 px-3 
-                      flex justify-center align-middle items-center drop-shadow-4xl 
-                      shadow-lg shadow-shadowcolor bg-white'>
+                      flex justify-center align-middle items-center shadow:md
+                      bg-white'>
                       <span className="border-shadowcolor text-3xl">{item.icon}</span>
                   </div>
                   <h1 className='text-lg  justify-center
@@ -37,14 +35,15 @@ import customer from '../../data/Customer';
             </Step>
             )
           })
-         }
+        }
        </Setup>
+        </div>
 
        {/* why work with us  */}
 
   <div className=" flex-col mt-10">
          <div className="relative w-full">
-           <h1 className=' text-[20px]  capitalize font-medium text-center'>Why Choose Zetahut</h1>
+           <h1 className=' text-[20px] text-[#665DF5]  capitalize font-medium text-center'>Why Choose Zetahut</h1>
            {/* <div className="bg-[#7000DF] w-[30%] left-[35%]   h-2 absolute "></div> */}
         </div>
        <Why className='flex mt-1 gap-4 justify-center items-center'>
@@ -54,8 +53,8 @@ import customer from '../../data/Customer';
                 <WCard key={index} className='flex justify-center rounded-lg shadow-lg drop-shadow-lg  items-center align-middle mt-8'>
                <div  className='py-2 px-2 flex flex-col gap-2 justify-center  items-center  '>
                   <div className=' w-[60px] h-[60px] rounded-lg mt-2 px-3 
-                      flex justify-center align-middle items-center drop-shadow-4xl 
-                      shadow-lg shadow-shadowcolor bg-white'>
+                      flex justify-center align-middle items-center shadow-md 
+                       bg-white'>
                       <span className="border-shadowcolor text-3xl">{item.Icon}</span>
                   </div>
                   <h1 className='text-lg font-bold mt-2 mb-2'>
@@ -81,7 +80,7 @@ import customer from '../../data/Customer';
         {/** what custome are saying */}
 
         <div className='flex mt-10 flex-col'>
-           <h1 className=' text-[20px] capitalize font-medium text-center'>What Customer Saying</h1>
+           <h1 className=' text-[20px] capitalize text-[#665DF5] font-medium text-center'>What Customer Saying</h1>
              <Mainc className='w-full flex  justify-center gap-6 items-center align-middle mt-12 '>
                 {
                   customer.map((item,index)=>{

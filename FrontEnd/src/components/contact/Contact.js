@@ -5,22 +5,22 @@ import styled from 'styled-components';
 function Contact() {
   return (
     <Container className='mt-32  w-full flex flex-col text-center justify-center items-center '>
-      <h1 className='text-base text-black font-bold'>Contact Us</h1>
+      <h1 className='text-base text-[#665DF5] font-bold'>Contact Us</h1>
         <div className=' subcon w-full flex gap-32 mt-8  justify-between items-center'>
           <div className=" cimg  flex-1">
             <img className='w-full h-full object-cover ' src={imagecontact} alt='contactus'/>
         </div>
-          <div className='py-4 w-[300px]  h-[350px] flex flex-col justify-center items-center shadow-2xl drop-shadow-2xl shadow-shadowcolor bg-white rounded-2xl '>
+          <div className='py-4 w-[300px]  h-[350px] flex flex-col justify-center items-center shadow-2xl  bg-[#1A1D1E] rounded-2xl '>
               <form className='gap-5 flex flex-col justify-center align-middle  '>
                  <div className='justify-center items-center m-auto gap-2'>
                     <div className="box mt-4">
-                        <input className='w-[250px] h-[35px] border rounded-sm border-slate-700/50 px-2' placeholder='Name' type='text' required />
+                        <input className='w-[250px] h-[35px] border bg-transparent outline-none rounded-sm border-slate-700/60 px-2' placeholder='Name' type='text' required />
                     </div>
                     <div className="box mt-4">
-                        <input className='w-[250px] h-[35px] border rounded-sm border-slate-700/50 px-2' placeholder='Name' type='text' required />
+                        <input className='w-[250px] h-[35px] border bg-transparent outline-none rounded-sm border-slate-700/50 px-2' placeholder='email' type='email' required />
                     </div> 
                     <div className="box mt-4">
-                     <textarea className=' w-[250px] h-[105px] border rounded-sm border-slate-700/50 px-2' placeholder='message' type='text' required />
+                     <textarea className=' w-[250px] h-[105px] border bg-transparent outline-none rounded-sm border-slate-700/50 px-2' placeholder='message' type='text' required />
                     </div>
                  </div>
                 <button className='py-2 px-2  text-white rounded-md bg-shadowcolor '>Send</button>

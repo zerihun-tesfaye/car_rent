@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 body{
-  background-color:#d5d6d6;
+  background-color:#34383A;
+
   /* background-color:rgb(205, 206, 207); */
   
 }
@@ -10,8 +11,8 @@ body{
  display:flex;
  transition: all 0.3s;
 }
- p,h1,h4,h5,h6,h2,h3,small{
-   color:#0e1114;
+ p,h1,h4,h5,h6,h2,h3,small,a{
+  color:#E8E5DF;
  }
   p{
     justify-content:center;
