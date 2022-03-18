@@ -2,8 +2,8 @@ import React from 'react'
 
 const Uploades = () => {
   return (
-    <div>Uploades</div>
+    <div className="">Uploades</div>
   )
 }
 
-export default Uploades
+export default Uploades;

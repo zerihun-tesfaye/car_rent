@@ -1,12 +1,14 @@
 import React from 'react'
 import Newd from '../../data/Used'
 import  styled from 'styled-components'
+ import {Link} from 'react-router-dom'
 function Used() {
   return (
     <Container className='w-full flex  justify-center gap-6 align-middle '>
          {
            Newd.map((item,index)=>{
               return(
+                 <Link to="/detail">
                 <Card key={index} className=' pb-3 shadow-2xl 
                    drop-shadow-2xl shadow-gray-500/50  '>
                       <div className="w-[280px] p-0 m-0">
@@ -43,6 +45,7 @@ function Used() {
                 </div>
          </Card>
        
+                    </Link>
          )
       })
     }

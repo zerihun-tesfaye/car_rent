@@ -1,3 +1,4 @@
+
 export const navdata=[
   {
    title:"car",
@@ -10,6 +11,7 @@ export const navdata=[
   {
    title:"login",
    url:"/login"
-  }
+  },
+  
 ]
 export default navdata;

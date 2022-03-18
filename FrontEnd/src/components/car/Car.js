@@ -4,7 +4,7 @@ const Car = () => {
   return (
     <Container>
          <div className="contents">
-             
+              <h4>hello</h4>
          </div>
     </Container>
   )

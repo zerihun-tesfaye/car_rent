@@ -2,7 +2,10 @@ import React from 'react'
 
 function Cart() {
   return (
-    <div><h3>hkk</h3></div>
+    <div className="cart bg-black m-0">
+      <h3>
+        Hello
+      </h3></div>
   )
 }
 

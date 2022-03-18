@@ -17,7 +17,7 @@ const Container=styled.button`
       padding:3px 12px;
       margin:2px 4px;
       border-radius:5px;
-      background:#edde;
+      background:#d00;
     }
  `
 

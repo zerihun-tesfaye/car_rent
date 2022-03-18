@@ -10,10 +10,10 @@ body{
 .test{
   color:#342e36;
 }
-.active{
- display:flex;
- transition: all 0.3s;
-}
+ 
+
+
+
  p,h1,h4,h5,h6,h2,h3,small,a{
   color:#E8E5DF;
  }

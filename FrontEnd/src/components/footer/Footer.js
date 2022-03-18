@@ -3,6 +3,7 @@ import {FaFacebook,FaLinkedinIn} from 'react-icons/fa'
 import styled from 'styled-components';
 function Footer() {
   return (
+    <>
     <Container className=' flex flex-col mt-24'>
       <Content className='flex px-5 mt-10 justify-evenly'>
           <h1 className=' font-bold capitalize text-base'>Zeta<span className='capitalize text-base font-bold text-button'>Hut</span></h1>
@@ -31,7 +32,7 @@ function Footer() {
       <h1 className='text-sm font-light'>@Copy2022 zetahut.com All Right Reserved</h1>
       </div>
     </Container>
-  
+    </>
   )
 }
 const Container = styled.div`
