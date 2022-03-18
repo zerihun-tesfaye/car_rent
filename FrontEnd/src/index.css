@@ -8,9 +8,20 @@ body{
   
 }
 .test{
-  color:#342e36;
+  color:#27292c;
 }
- 
+ .conactive {
+   position: fixed;
+   height: 3rem;
+   box-shadow: 0 0 8px rgba(0, 0, 0,.9);
+   background-color: #27292c;
+ }
+
+ .containerr {
+   height: 3rem;
+   position: sticky;
+   background: transparent;
+ }
 
 
 

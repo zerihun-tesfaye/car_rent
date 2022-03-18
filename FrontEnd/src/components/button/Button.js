@@ -14,10 +14,14 @@ const Container=styled.button`
    align-items: center;
     .btn{
       display:inline-block;
-      padding:3px 12px;
+      padding:5px 12px;
       margin:2px 4px;
       border-radius:5px;
-      background:#d00;
+      background:#008000;
+      transition:all 0.4s;
+       &:hover{
+         opacity:0.7;
+       }
     }
  `
 

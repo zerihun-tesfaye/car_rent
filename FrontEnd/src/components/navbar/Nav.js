@@ -19,7 +19,6 @@ function Nav() {
 
   // 
   const changeBackground = () => {
-    console.log(window.scrollY)
     if (window.scrollY >=60) {
       setNavbar(true);
     } else {
@@ -31,9 +30,9 @@ function Nav() {
     window.addEventListener("scroll", changeBackground)
   })
   return (
-    <Container className={navbar ? 'fixed  h-[3rem] bg-gray-400 container':'  h-[3rem]  sticky'}>
-        <nav className="flex  justify-between items-center ">
-        <div className="toggle " onClick={()=>handleClick()}>
+    <Container className={navbar ? ' conactive   	 ':' containerr'}>
+        <nav className="flex container  justify-between items-center ">
+        <div className="toggle " onClick={()=>handleClick(!show)}>
             <svg className="w-[2rem] text-white h-[2rem]" fill="none" stroke="currentColor" 
                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                <path stroke-linecap="round" stroke-linejoin="round" 
@@ -41,7 +40,7 @@ function Nav() {
               </path></svg>
           </div>
            <div className="logo">
-                    <Link to="/" className=" flex items-center traki text-white text-md font-bold gap-1 ">
+                    <Link to="/" className=" flex items-center  text-white text-md font-bold gap-1 ">
                        <span className="text-[#d00] text- bold text-2xl"> G </span>ear
                     </Link>
                   </div>
@@ -61,7 +60,9 @@ function Nav() {
             
           }
            <div className=" text-white">
-                   <Button/>
+                  <Link to="/upload"onClick={()=>closeshow(false)}>
+                    <Button/>
+                  </Link> 
                  </div>
             </ul>
             </div>

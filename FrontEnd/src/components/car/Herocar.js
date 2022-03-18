@@ -1,6 +1,7 @@
 import React from 'react'
-import imagehero from '../../assets/image/car3.jpg'
+import imagehero from '../../assets/video/carv1.mp4'
 import styled from 'styled-components'
+   
 const Herocar=()=>{
   return (
     <Container>

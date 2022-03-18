@@ -23,7 +23,7 @@ function Contact() {
                      <textarea className=' w-[250px] h-[105px] border bg-transparent outline-none rounded-sm border-slate-700/50 px-2' placeholder='message' type='text' required />
                     </div>
                  </div>
-                <button className='py-2 px-2  text-white rounded-md bg-shadowcolor '>Send</button>
+                <button className='py-2 px-2  text-white rounded-md bg-[#d00] '>Send</button>
              </form>
         </div>
     </div>

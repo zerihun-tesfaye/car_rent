@@ -2,23 +2,26 @@ import styled from 'styled-components'
 // 
  export const Container=styled.div`
  width:100%;
- z-index:1000;
+ z-index:100;
  top:0;
  left:0;
- z-index:100;
  transition:all 0.3s;
 
-
+ .container{
+      max-width:1100px;
+      margin:auto;
+      width:100%;
+ }
+  
    nav{
       display: flex;
       justify-content:space-between;
       align-items:center;
       height:100%;
-      margin-left:2.5rem;
-      margin-right:2.5rem;
-       @media (max-width:970px){
-                margin-left:.341rem;
-                margin-right:.341rem;  
+      
+       @media screen and (max-width:970px){
+                padding-left:.344rem;
+                padding-right:.344rem;  
              }
          .toggle{
             display:none;
@@ -38,7 +41,6 @@ import styled from 'styled-components'
         justify-content:space-between;
         width:100%;
         flex-wrap:wrap;  
-        flex-direction:column;
         
         ul{
            display: flex;
@@ -60,7 +62,7 @@ import styled from 'styled-components'
               justify-content: center;
               flex-direction:column;
               justify-content:center;
-              align-items:stretch;
+              align-items:start;
               width:100%;
               margin-left:1rem;
                
@@ -72,13 +74,14 @@ import styled from 'styled-components'
            top:3rem;
            left:-100%;
            margin:0 auto;
-           background-color:#daa;
+           background-color:#222529;
            width:10.9rem;
-           box-shadow:0 0 4px rgba(0,0,0,.5);
-           transition:  all 0.3s;
-           z-index:50;
+           transition:  all 0.9s;
+           z-index:500;
            padding:2rem 0;
            border-radius:3px;
+           border:none;
+           outline:none;
            flex-direction :column;
            
         }

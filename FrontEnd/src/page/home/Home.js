@@ -9,9 +9,10 @@ import customer from '../../data/Customer';
 
  function Home() {
   return (
-    <Container className="w-full justify-center flex flex-col items-center">
-      <Hero/>
-      <div className="flex  w-full flex-col mt-10  ">
+    <Container className="  w-full  flex flex-col items-center">
+      <Hero />
+       <div className="container">
+       <div className="flex  w-full flex-col mt-10  ">
 
         <h1 className=' text-[20px] capitalize text-[#665DF5] font-medium text-center'>Our Working Step</h1>
           <Setup className='  flex w-full justify-center items-center gap-8'>
@@ -41,7 +42,7 @@ import customer from '../../data/Customer';
 
        {/* why work with us  */}
 
-  <div className=" flex-col mt-10">
+      <div className=" flex-col mt-10">
          <div className="relative w-full">
            <h1 className=' text-[20px] text-[#665DF5]  capitalize font-medium text-center'>Why Choose Zetahut</h1>
            {/* <div className="bg-[#7000DF] w-[30%] left-[35%]   h-2 absolute "></div> */}
@@ -100,7 +101,8 @@ import customer from '../../data/Customer';
               }
             </Mainc>
         <Contact/>
-      </div>
+       </div>
+    </div>
     </Container>
   )
 }
@@ -108,9 +110,14 @@ import customer from '../../data/Customer';
    const Container=styled.div`
      display: flex;
      width: 100%;
+     justify-content: center;
+     .container{
+        max-width:1100px;
+        margin:auto;
+        width:100%;
+    }
    `;
-
-  const Setup = styled.div`
+   const Setup = styled.div`
      display: flex;
      @media screen and (max-width:979px){
       display:flex;
@@ -122,8 +129,7 @@ import customer from '../../data/Customer';
   justify-content: center;
   align-items: center
   display:flex;
- 
-   .card{
+ .card{
         width:250px;
         height:200px;
         justify-content: center;

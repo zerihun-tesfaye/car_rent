@@ -53,21 +53,22 @@ const Container=styled.div`
        gap:2rem;
        text-transform   :capitalize ;
         button{
-          background-color:#ddd;
+          background-color:#2F3133;
           padding: 3px 10px;
           display:inline-block;
           text-align: center;
           align-items: center;
           justify-content: center;
-          color:#000;
+          color:#ffffff;
         }
         .active-tab{
           color: white;
-          background:  #1EB3FC;
+          background: #d00;
           padding: 3px 10px;
           border-radius:5px;
           border:none;
           color: white;
+          
            &:hover{
              opacity:0.5;
            }
