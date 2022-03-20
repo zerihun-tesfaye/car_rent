@@ -1,17 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
+import Calander from '../calander/Calander'
+import {Container} from './Carstyle'
+
 const Car = () => {
   return (
     <Container>
-         <div className="contents">
-              <h4>hello</h4>
-         </div>
+     <Calander/>
+       
     </Container>
   )
 }
-const Container = styled.div`
-  width:100%;
-`
-;
+        
+           
+       
+
+
 
 export default Car
