@@ -2,6 +2,7 @@ import React from 'react'
 import Cars from '../../components/car/Car'
 import styled from 'styled-components'
 import Search from '../../components/search/Search'
+import CarList from '../../components/carlist/CarList'
 
 
 function Car() {
@@ -9,6 +10,7 @@ function Car() {
     <Container>
         <Cars/>
         <Search/>
+        <CarList/>
     </Container>
 
   )

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img1 from '../../assets/image/car4.jpg'
+import img1 from '../../assets/image/car80.jpg'
 
 export const Container = styled.div`
    background-color:rgb(0,0,0,.6) ;
