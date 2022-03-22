@@ -12,6 +12,12 @@ body{
 
   
 }
+
+@media  screen and (max-width:970px){
+  .row{
+    flex-direction: column;
+  }
+}
 .test{
   color:#757575;
 }

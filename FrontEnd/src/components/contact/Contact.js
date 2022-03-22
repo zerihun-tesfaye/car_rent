@@ -5,7 +5,7 @@ import styled from 'styled-components';
 function Contact() {
   return (
     <Container className='mt-32  w-full flex flex-col text-center justify-center items-center '>
-      <h1 className='text-base text-[#665DF5] font-bold'>Contact Us</h1>
+      <h1 className='text-base text-[#D7DBDD] font-bold'>Contact Us</h1>
         <div className=' subcon w-full flex gap-32 mt-8  justify-between items-center'>
           <div className=" cimg  flex-1">
             <img className='w-full h-full object-cover ' src={imagecontact} alt='contactus'/>

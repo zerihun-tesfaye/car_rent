@@ -9,7 +9,7 @@ function Used() {
            Newd.map((item,index)=>{
               return(
                  <Link to="/detail">
-                <Card key={index} className=' pb-3 shadow-2xl 
+                 <Card key={index} className=' pb-3 shadow-2xl 
                    drop-shadow-2xl shadow-gray-500/50  '>
                       <div className="w-[280px] p-0 m-0">
                        <img className='w-full object-contain ' src={item.car} alt='usedcars'/>

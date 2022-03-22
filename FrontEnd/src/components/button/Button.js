@@ -17,7 +17,7 @@ const Container=styled.button`
       padding:5px 12px;
       margin:2px 4px;
       border-radius:5px;
-      background:#008000;
+      background:#273746;
       transition:all 0.4s;
        &:hover{
          opacity:0.7;

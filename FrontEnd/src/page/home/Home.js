@@ -14,7 +14,7 @@ import customer from '../../data/Customer';
        <div className="container">
        <div className="flex  w-full flex-col mt-10  ">
 
-        <h1 className=' text-[20px] capitalize text-[#665DF5] font-medium text-center'>Our Working Step</h1>
+        <h1 className=' text-[20px] capitalize text-[#D7DBDD] font-medium text-center'>Our Working Step</h1>
           <Setup className='  flex w-full justify-center items-center gap-8'>
            {
              Setupd.map((item,index)=>{
@@ -27,9 +27,9 @@ import customer from '../../data/Customer';
                       bg-black text-white'>
                       <span className="border-shadowcolor text-3xl">{item.icon}</span>
                   </div>
-                  <h1 className='text-lg  justify-center
-                   font-bold mt-3'>{item.title}</h1>
-                  <p className='text-[10px] font-light text-start px-2 
+                  <h1 className='  justify-center
+                   items-center mt-3 text-md semi-bold'>{item.title}</h1>
+                  <p className='text-[10px] font-light text-[#909497] text-start px-2 
                   '>{item.description}</p>
                   </div>
               </div>
@@ -44,8 +44,7 @@ import customer from '../../data/Customer';
 
       <div className=" flex-col mt-10">
          <div className="relative w-full">
-           <h1 className=' text-[20px] text-[#665DF5]  capitalize font-medium text-center'>Why Choose Zetahut</h1>
-           {/* <div className="bg-[#7000DF] w-[30%] left-[35%]   h-2 absolute "></div> */}
+           <h1 className=' text-[20px] text-[#D7DBDD]  capitalize font-medium text-center'>Why Choose Zetahut</h1>
         </div>
        <Why className='flex mt-1 gap-8 justify-center items-center'>
           {
@@ -58,10 +57,10 @@ import customer from '../../data/Customer';
                      bg-black text-white'>
                       <span className="border-shadowcolor text-3xl">{item.Icon}</span>
                   </div>
-                  <h1 className='text-lg font-bold mt-2 mb-2'>
+                  <h1 className='text-md semi-bold mt-2 mb-2'>
                    {item.text}
                   </h1>
-                  <p className='text-[10px] font-light '>
+                  <p className='text-[10px] text-[#909497] font-light '>
                      {item.Description}
                   </p>
               </div>
@@ -74,14 +73,14 @@ import customer from '../../data/Customer';
           </div>
        {/**  tab layout */}
         <div className=' mt-10 flex flex-col justify-center items-center'>
-           <h className="text-center font-bold  text-[#665DF5] capitalize text-lg">the most popular rent cars</h>
+           <h className="text-center font-bold  text-[#D7DBDD] capitalize text-lg">the most popular rent cars</h>
              <Tabc/>
         </div>
 
         {/** what custome are saying */}
 
         <div className='flex mt-10 flex-col'>
-           <h1 className=' text-[20px] capitalize text-[#665DF5] font-medium text-center'>What Customer Saying</h1>
+           <h1 className=' text-[20px] capitalize text-[#D7DBDD] font-medium text-center'>What Customer Saying</h1>
              <Mainc className='w-full flex  justify-center gap-6 items-center align-middle mt-12 '>
                 {
                   customer.map((item,index)=>{
