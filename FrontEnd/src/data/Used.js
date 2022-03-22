@@ -13,86 +13,86 @@
 
 export const Used=[
   {
-    price:"200birr/Day",
+    price:"400 birr/Day",
     car:carimg,
-    carname:'2022 toyota',
+    carname:'tesla',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
-    price:"200birr/Day",
+    price:"200 birr/Day",
     car:carimg1,
-    carname:'2022 toyota',
+    carname:'toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
-    price:"200birr/Day",
+    price:"300 birr/Day",
     car:carimg2,
-    carname:'2022 toyota',
+    carname:' tesla',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
-    price:"200birr/Day",
+    price:"500 birr/Day",
     car:carimg3,
-    carname:'2022 toyota',
+    carname:' bmw',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
     price:"200birr/Day",
     car:carimg4,
-    carname:'2022 toyota',
+    carname:' toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
     price:"200birr/Day",
     car:carimg5,
-    carname:'2022 toyota',
+    carname:' toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
     price:"200birr/Day",
     car:carimg6,
-    carname:'2022 toyota',
+    carname:' toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
     price:"200birr/Day",
     car:carimg7,
-    carname:'2022 toyota',
+    carname:' toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
     price:"200birr/Day",
     car:carimg7,
-    carname:'2022 toyota',
+    carname:'toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"new"
   },
   {
     price:"200birr/Day",
     car:carimg8,
-    carname:'2022 toyota',
+    carname:' toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
     price:"200birr/Day",
     car:carimg9,
-    carname:'2022 toyota',
+    carname:'  toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
   {
     price:"200birr/Day",
     car:carimg10,
-    carname:'2022 toyota',
+    carname:' toyota',
     Description:'Toyota Avalon scored best among used Avalons in the rankings, model years 2009 through 2014',
     btnused:"used"
   },
