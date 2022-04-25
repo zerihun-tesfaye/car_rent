@@ -1,6 +1,10 @@
 import dotenv from 'dotenv'
+
 dotenv.config()
 export const {
    PORT,
-   MongoURL
+   MongoURL,
+   JWTSecretKey,
+   JWTExpiresIn
   } = process.env;
+

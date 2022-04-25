@@ -5,7 +5,7 @@ import appError from '../helpers/appError.js'
  // to send error to the 
 function SendError(err,res){
     res.status(err.statusCode).json({
-        status: err.status,
+      status: err.status,
         message: err.message,
         error: err,
         stack: err.stack,
@@ -15,7 +15,7 @@ function SendError(err,res){
 export function catchGlobalError(err, req, res, next){
     err.statusCode = err.statusCode || 500
     err.status = err.status || "Error"
-    SendError(err,req)
+    SendError(err,res)
 }
 // middleware for the controller 
 export function catchAsync(fn){

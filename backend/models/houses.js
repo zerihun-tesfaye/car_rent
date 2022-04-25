@@ -7,6 +7,10 @@ const house = new Schema({
     owner:{
         type:Schema.Types.ObjectId,
         ref:"User"
+    },
+    address:{type:String},
+    housePicture:{
+        type:Array
     }
 })
 
