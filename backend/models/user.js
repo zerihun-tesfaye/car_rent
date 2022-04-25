@@ -5,7 +5,17 @@ const user =new Schema({
     lastname:{ type:String , required:true},
     email:{ type:String , required:true},
     password:{ type:String , required:true},
-    profile:{ type:String ,default:"https://robohash.org/suscipiteteos.png?size=50x50&set=set1"}
+    phonenumber:{type:String},
+    profile:{ type:String ,default:"https://robohash.org/suscipiteteos.png?size=50x50&set=set1"},
+    rentedCar:{
+       type:Schema.Types.ObjectId,
+       ref:'car' 
+    },
+    rentedHouse:{
+        type:Schema.Types.ObjectId,
+        ref:'house'
+    }
+    
 })
 
 export  default  Mongoose.model("User",user)

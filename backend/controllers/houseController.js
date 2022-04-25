@@ -28,6 +28,8 @@ export const  houseController = {
         })
          
     }),
+
+
     // get all
     getallHouse: catchAsync(async (req,res,next)=>{
          housesModel.find().populate('User').exec(function(err,result){
@@ -36,6 +38,12 @@ export const  houseController = {
             return res.json(result)
          })
     }),
+    // single house
+    getSingleHouse: catchAsync(async (req,res,next)=>{
+
+    })
+
+    // 
 
 }
 

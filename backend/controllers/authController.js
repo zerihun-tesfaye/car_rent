@@ -20,6 +20,7 @@ const register = catchAsync(async (req,res,next)=>{
     const firstname = data.firstname
     const lastname = data.lastname
     const olduser = await userModel.findOne({email})
+    
     console.log(olduser)
   if(olduser) return next(new appError("User Already Registered",404))
   await userModel.create({
@@ -27,6 +28,7 @@ const register = catchAsync(async (req,res,next)=>{
      lastname:lastname,
      email:email,
      password:password,
+     phonenumber:phonenumber,
      profile:data.profile
  })
  .then((responce)=>{
